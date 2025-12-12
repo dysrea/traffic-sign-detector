@@ -40,6 +40,12 @@ Building this wasn't just about `model.fit()`.
    * Get the [Indian Traffic Sign Dataset from Kaggle](https://www.kaggle.com/datasets/neelpratiksha/indian-traffic-sign-dataset).
    * Extract the zip file.
    * Should be ready to use. If not, rename the extracted folder to `Images`.
+   
+## 🧠 Model Download
+The trained model is too large for GitHub. 
+[Click here to download indian_traffic_model_HD.keras](https://drive.google.com/file/d/1tr4qz8U0ylaebpthQn4R7q6YE2RJzZwe/view?usp=sharing)
+
+**Setup:** Download this file and place it in the main project folder.
 
 
 ## 📂 Project Structure
@@ -87,5 +93,6 @@ The custom CNN consists of:
 3.  **Conv Block 2:** 30 filters (3x3) + MaxPooling + BatchNormalization + Dropout (0.5)
 4.  **Fully Connected:** 500 Neurons
 5.  **Output:** Softmax Layer (59 Classes)
+
 
 
