@@ -21,17 +21,17 @@ Building this wasn't just about `model.fit()`.
 ### 1. The "Pixel Blob" Problem (32p vs 64p)
 * **The Problem:** Initially, the model was trained on 32x32 pixel images. It consistently confused "No Parking" (Class 21) with "No Left Turn" (Class 15).
 * **The Root Cause:** At 32x32 resolution, the black symbol for "P" and a "Left Arrow" looked like identical pixel blobs.
-* **The Solution:** Refactored the entire pipeline (Training & Detection) to support **64x64 HD resolution**. This 4x increase in pixel density allowed the CNN to see the curve of the "P", solving the confusion.
+* **The Solution:** Refactored the entire pipeline (Training & Detection) to support **64x64 resolution**. This 4x increase in pixel density allowed the CNN to see the curve of the "P", solving the confusion.
 
 ### 2. The "Manual Aiming" Struggle
 * **The Problem:** The first version required the user to hold the sign inside a static "Blue Box." It was frustrating and prone to background noise errors.
-* **The Solution:** I built a **Universal Color Detector** using HSV thresholds. Instead of looking for "Red", it scans the frame for "High Saturation" objects. This automatically locks onto Red (Stop), Blue (Parking), and Yellow (Warning) signs without manual aiming.
+* **The Solution:** I built a **Universal Colour Detector** using HSV thresholds. Instead of looking for "Red", it scans the frame for "High Saturation" objects. This automatically locks onto Red (Stop), Blue (Parking), and Yellow (Warning) signs without manual aiming.
 
 
 ## 🧠 Tech Stack
 * **Language:** Python 3.11+
 * **Deep Learning:** TensorFlow / Keras (CNN Architecture)
-* **Computer Vision:** OpenCV (Color filtering, Contour detection, Perspective warping)
+* **Computer Vision:** OpenCV (colour filtering, Contour detection, Perspective warping)
 * **Data Processing:** NumPy, Pandas, Scikit-Learn
 
 ## 📚 Dataset & Setup
@@ -93,6 +93,7 @@ The custom CNN consists of:
 3.  **Conv Block 2:** 30 filters (3x3) + MaxPooling + BatchNormalization + Dropout (0.5)
 4.  **Fully Connected:** 500 Neurons
 5.  **Output:** Softmax Layer (59 Classes)
+
 
 
 
