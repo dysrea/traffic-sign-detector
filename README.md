@@ -2,7 +2,7 @@
 
 A deep learning application that detects and classifies Indian Traffic Signs in real-time using CNN and OpenCV.
 
-Unlike standard tutorials that use static images, this project implements a detector that automatically locates signs (Red, Blue, or Yellow) from a live webcam feed, crops them, and classifies them with **96% accuracy** using a 64x64 model.
+Unlike standard tutorials that use static images, this project implements a detector that automatically locates signs (Red, Blue, or Yellow) from a live webcam feed, crops them, and classifies them with **86% accuracy** using a 64x64 model.
 
 
 ## 📸 Demo
@@ -93,6 +93,7 @@ The custom CNN consists of:
 3.  **Conv Block 2:** 30 filters (3x3) + MaxPooling + BatchNormalization + Dropout (0.5)
 4.  **Fully Connected:** 500 Neurons
 5.  **Output:** Softmax Layer (59 Classes)
+
 
 
 
